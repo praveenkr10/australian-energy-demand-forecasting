@@ -1,0 +1,34 @@
+{
+  "project": "Australian Energy Demand Forecasting",
+  "dataset": "Synthetic Australian NEM-style regional electricity demand dataset",
+  "target": "demand_mw",
+  "best_model": "Random Forest",
+  "metrics": [
+    {
+      "model": "Linear Regression",
+      "mae": 315.78,
+      "rmse": 404.21,
+      "mape": 6.44,
+      "r2": 0.9765
+    },
+    {
+      "model": "Random Forest",
+      "mae": 276.5,
+      "rmse": 360.39,
+      "mape": 5.34,
+      "r2": 0.9813
+    },
+    {
+      "model": "Neural Network",
+      "mae": 289.94,
+      "rmse": 375.87,
+      "mape": 5.67,
+      "r2": 0.9797
+    }
+  ],
+  "notes": [
+    "Chronological split used to avoid random time-series leakage.",
+    "Neural Network model uses MLPRegressor with lag and rolling demand features.",
+    "Dataset can be replaced with AEMO/Open Electricity data for production use."
+  ]
+}
